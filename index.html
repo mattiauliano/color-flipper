@@ -20,6 +20,19 @@
 
     <script>
 
+        const h1 = document.querySelector('h1');
+        const circle = document.querySelector('.circle');
+        const circleText = document.querySelector('p');
+
+        const button = document.querySelector('button');
+        button.addEventListener('click', (e) => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+            circle.style.backgroundColor = '#' + randomColor;
+            circleText.innerHTML = `#${randomColor}`;
+            
+        });
+
     </script>
 
 </body>
